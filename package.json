@@ -1,7 +1,6 @@
 {
 	"name": "@iamnapo/sort",
 	"version": "0.0.0",
-	"private": true,
 	"description": "Sorting comparators so you don't have to remember what to substract from what",
 	"keywords": [
 		"comparator",
@@ -48,5 +47,8 @@
 	},
 	"engines": {
 		"node": ">=12"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

@@ -20,8 +20,8 @@ const sort = require("@iamnapo/sort");
 [12, -42, -Infinity, 123, Number.NaN].sort(sort.numberSmallToLarge());
 //=> [Number.NaN, -Infinity, -42, 12, 123]
 
-[{ name: "Alice", age: 20 }, { name: "Bob", age: 30 }, { name: "Napoleon", age: 26 }].sort(sort.numberSmallToLarge((p) => p.age));
-//=> [{ name: "Alice", age: 20 }, { name: "Napoleon", age: 26 }, { name: "Bob", age: 30 }];
+[{ name: "Mary", age: 20 }, { name: "Bob", age: 30 }, { name: "Napoleon", age: 26 }].sort(sort.numberSmallToLarge((p) => p.age));
+//=> [{ name: "Mary", age: 20 }, { name: "Napoleon", age: 26 }, { name: "Bob", age: 30 }];
 ```
 
 ## API
@@ -54,13 +54,13 @@ Descending sort comparator for strings.
 
 Case-insensitive ascending sort comparator for strings.
 
-> Note: In case of euality, a case-sensitive comparison is the tie-breaker.
+> Note: In case of equality, a case-sensitive comparison is the tie-breaker.
 
 ### sort.stringZToAInsensitive(get?)
 
 Case-insensitive descending sort comparator for strings.
 
-> Note: In case of euality, a case-sensitive comparison is the tie-breaker.
+> Note: In case of equality, a case-sensitive comparison is the tie-breaker.
 
 #### get
 
