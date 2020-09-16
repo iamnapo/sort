@@ -21,9 +21,15 @@
 		"email": "napoleonoikon@gmail.com",
 		"url": "https://iamnapo.me"
 	},
+	"exports": {
+		"import": "./index.mjs",
+		"require": "./index.js"
+	},
 	"main": "index.js",
+	"module": "index.mjs",
 	"files": [
 		"index.js",
+		"index.mjs",
 		"index.d.ts"
 	],
 	"scripts": {
