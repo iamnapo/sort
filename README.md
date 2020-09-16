@@ -2,9 +2,7 @@
 
 > Sorting comparators so you don't have to remember what to substract from what
 
-[![build](https://img.shields.io/github/workflow/status/iamnapo/sort/ci?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/sort/actions)
-[![npm](https://img.shields.io/npm/v/@iamnapo/sort.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/@iamnapo/sort)
-[![license](https://img.shields.io/github/license/iamnapo/sort.svg?style=for-the-badge)](./LICENSE)
+[![build](https://img.shields.io/github/workflow/status/iamnapo/sort/ci?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/sort/actions) [![npm](https://img.shields.io/npm/v/@iamnapo/sort.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/@iamnapo/sort) [![license](https://img.shields.io/github/license/iamnapo/sort.svg?style=for-the-badge)](./LICENSE)
 
 ## Install
 

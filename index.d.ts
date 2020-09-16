@@ -1,91 +1,79 @@
-export type NumberComparator = (get: (v: any) => v) => (left: number, right: number) => number;
-export type DateComparator = (get: (v: any) => v) => (left: Date, right: Date) => number;
-export type StringComparator = (get: (v: any) => v) => (left: string, right: string) => string;
-
 /**
 Ascending sort comparator for numbers.
-@example
 ```
-import sort from "@iamnapo/sort";
-[12, -42, -Infinity, 123, Number.NaN].sort(sort.numberSmallToLarge());
-//=> [Number.NaN, -Infinity, -42, 12, 123]
+import { numberSmallToLarge } from "@iamnapo/sort";
+[12, -42, -Infinity, 123, Number.NaN].sort(numberSmallToLarge());
+// => [Number.NaN, -Infinity, -42, 12, 123]
 ```
 */
-export const numberSmallToLarge: NumberComparator;
+export function numberSmallToLarge(get?: (v: any) => number): (l: number, r: number) => number;
 
 /**
 Descending sort comparator for numbers.
-@example
 ```
-import sort from "@iamnapo/sort";
-[12, -42, -Infinity, 123, Number.NaN].sort(sort.numberLargeToSmall());
-//=> [123, 12, -42, -Infinity, Number.NaN]
+import { numberLargeToSmall } from "@iamnapo/sort";
+[12, -42, -Infinity, 123, Number.NaN].sort(numberLargeToSmall());
+// => [123, 12, -42, -Infinity, Number.NaN]
 ```
 */
-export const numberLargeToSmall: NumberComparator;
+export function numberLargeToSmall(get?: (v: any) => number): (l: number, r: number) => number;
 
 /**
 Ascending sort comparator for Dates.
-@example
 ```
-import sort from "@iamnapo/sort";
-[new Date("2019-06-28"), new Date("2019-06-10"), new Date("2019-06-22")].sort(sort.dateOldToNew());
-//=> [new Date("2019-06-10"), new Date("2019-06-22"), new Date("2019-06-28")]
+import { dateOldToNew } from "@iamnapo/sort";
+[new Date("2019-06-28"), new Date("2019-06-10"), new Date("2019-06-22")].sort(dateOldToNew());
+// => [new Date("2019-06-10"), new Date("2019-06-22"), new Date("2019-06-28")]
 ```
 */
-export const dateOldToNew: DateComparator;
+export function dateOldToNew(get?: (v: any) => Date): (l: Date, r: Date) => number;
 
 /**
 Descending sort comparator for Dates.
-@example
 ```
-import sort from "@iamnapo/sort";
-[new Date("2019-06-28"), new Date("2019-06-10"), new Date("2019-06-22")].sort(sort.dateNewToOld());
-//=> [new Date("2019-06-28"), new Date("2019-06-22"), new Date("2019-06-10")]
+import { dateNewToOld } from "@iamnapo/sort";
+[new Date("2019-06-28"), new Date("2019-06-10"), new Date("2019-06-22")].sort(dateNewToOld());
+// => [new Date("2019-06-28"), new Date("2019-06-22"), new Date("2019-06-10")]
 ```
 */
-export const dateNewToOld: DateComparator;
+export function dateNewToOld(get?: (v: any) => Date): (l: Date, r: Date) => number;
 
 /**
 Ascending sort comparator for strings.
-@example
 ```
-import sort from "@iamnapo/sort";
-["b", "a", "c"].sort(sort.stringAToZ());
-//=> ["a", "b", "c"]
+import { stringAToZ } from "@iamnapo/sort";
+["b", "a", "c"].sort(stringAToZ());
+// => ["a", "b", "c"]
 ```
 */
-export const stringAToZ: StringComparator;
+export function stringAToZ(get?: (v: any) => string): (l: string, r: string) => number;
 
 /**
 Descending sort comparator for strings.
-@example
 ```
-import sort from "@iamnapo/sort";
-["b", "a", "c"].sort(sort.stringZToA());
-//=> ["c", "b", "a"]
+import { stringZToA } from "@iamnapo/sort";
+["b", "a", "c"].sort(stringZToA());
+// => ["c", "b", "a"]
 ```
 */
-export const stringZToA: StringComparator;
+export function stringZToA(get?: (v: any) => string): (l: string, r: string) => number;
 
 /**
 Case-insensitive ascending sort comparator for strings.
-@example
 ```
-import sort from "@iamnapo/sort";
-['B', 'a', 'C'].sort(sort.stringAToZInsensitive());
-//=> ['a', 'B', 'C']
+import { stringAToZInsensitive } from "@iamnapo/sort";
+["B", "a", "C"].sort(stringAToZInsensitive());
+// => ["a", "B", "C"]
 ```
 */
-export const stringAToZInsensitive: StringComparator;
+export function stringAToZInsensitive(get?: (v: any) => string): (l: string, r: string) => number;
 
 /**
 Case-insensitive descending sort comparator for strings.
-@example
 ```
-import sort from "@iamnapo/sort";
-['B', 'a', 'C'].sort(sort.stringZToAInsensitive());
-//=> ['C', 'B', 'a']
+import { stringZToAInsensitive } from "@iamnapo/sort";
+["B", "a", "C"].sort(stringZToAInsensitive());
+// => ["C", "B", "a"]
 ```
 */
-export const stringZToAInsensitive: StringComparator;
+export function stringZToAInsensitive(get?: (v: any) => string): (l: string, r: string) => number;
