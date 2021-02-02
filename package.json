@@ -21,15 +21,10 @@
 		"email": "napoleonoikon@gmail.com",
 		"url": "https://iamnapo.me"
 	},
-	"exports": {
-		"import": "./index.mjs",
-		"require": "./index.js"
-	},
-	"main": "index.js",
-	"module": "index.mjs",
+	"type": "module",
+	"exports": "./index.js",
 	"files": [
 		"index.js",
-		"index.mjs",
 		"index.d.ts"
 	],
 	"scripts": {
@@ -42,17 +37,19 @@
 			"pre-commit": "npm test"
 		}
 	},
-	"dependencies": {},
+	"eslintConfig": {
+		"extends": "iamnapo"
+	},
 	"devDependencies": {
-		"ava": "^3.13.0",
-		"eslint": "^7.10.0",
-		"eslint-config-iamnapo": "^8.0.1",
+		"ava": "^3.15.0",
+		"eslint": "^7.19.0",
+		"eslint-config-iamnapo": "^12.0.0",
 		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-unicorn": "^22.0.0",
-		"husky": "^4.3.0"
+		"eslint-plugin-unicorn": "^27.0.0",
+		"husky": "^4.3.8"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": ">=12"
 	},
 	"publishConfig": {
 		"access": "public"

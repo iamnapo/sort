@@ -19,7 +19,7 @@ const assertString = (string) => {
 	}
 };
 
-const numberSmallToLarge = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const numberSmallToLarge = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -31,7 +31,7 @@ const numberSmallToLarge = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 
 	return left - right;
 });
-const numberLargeToSmall = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const numberLargeToSmall = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -44,7 +44,7 @@ const numberLargeToSmall = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	return right - left;
 });
 
-const dateOldToNew = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const dateOldToNew = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -56,7 +56,7 @@ const dateOldToNew = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 
 	return left - right;
 });
-const dateNewToOld = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const dateNewToOld = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -71,7 +71,7 @@ const dateNewToOld = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 
 const { compare } = new Intl.Collator();
 const insensitiveCompare = (l, r) => compare(l.toLowerCase(), r.toLowerCase()) || compare(l, r);
-const stringAToZ = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const stringAToZ = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -80,7 +80,7 @@ const stringAToZ = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 
 	return compare(left, right);
 });
-const stringZToA = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const stringZToA = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -89,7 +89,7 @@ const stringZToA = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 
 	return compare(right, left);
 });
-const stringAToZInsensitive = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const stringAToZInsensitive = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -98,7 +98,7 @@ const stringAToZInsensitive = (get = ((v) => v)) => assertGet(get) || ((l, r) =>
 
 	return insensitiveCompare(left, right);
 });
-const stringZToAInsensitive = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
+export const stringZToAInsensitive = (get = ((v) => v)) => assertGet(get) || ((l, r) => {
 	const left = get(l);
 	const right = get(r);
 
@@ -107,14 +107,3 @@ const stringZToAInsensitive = (get = ((v) => v)) => assertGet(get) || ((l, r) =>
 
 	return insensitiveCompare(right, left);
 });
-
-module.exports = {
-	numberSmallToLarge,
-	numberLargeToSmall,
-	dateOldToNew,
-	dateNewToOld,
-	stringAToZ,
-	stringZToA,
-	stringAToZInsensitive,
-	stringZToAInsensitive,
-};

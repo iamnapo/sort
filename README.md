@@ -2,7 +2,7 @@
 
 > Sorting comparators so you don't have to remember what to substract from what
 
-[![build](https://img.shields.io/github/workflow/status/iamnapo/sort/ci?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/sort/actions) [![npm](https://img.shields.io/npm/v/@iamnapo/sort.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/@iamnapo/sort) [![license](https://img.shields.io/github/license/iamnapo/sort.svg?style=for-the-badge)](./LICENSE)
+[![build](https://img.shields.io/github/workflow/status/iamnapo/sort/ci?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/sort/actions) [![npm](https://img.shields.io/npm/v/@iamnapo/sort.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/@iamnapo/sort)
 
 ## Install
 
@@ -13,48 +13,48 @@ $ npm i @iamnapo/sort
 ## Usage
 
 ```js
-const sort = require("@iamnapo/sort");
+import { numberSmallToLarge } from "@iamnapo/sort";
 
-[12, -42, -Infinity, 123, Number.NaN].sort(sort.numberSmallToLarge());
+[12, -42, -Infinity, 123, Number.NaN].sort(numberSmallToLarge());
 //=> [Number.NaN, -Infinity, -42, 12, 123]
 
-[{ name: "Mary", age: 20 }, { name: "Bob", age: 30 }, { name: "Napoleon", age: 26 }].sort(sort.numberSmallToLarge((p) => p.age));
+[{ name: "Mary", age: 20 }, { name: "Bob", age: 30 }, { name: "Napoleon", age: 26 }].sort(numberSmallToLarge((p) => p.age));
 //=> [{ name: "Mary", age: 20 }, { name: "Napoleon", age: 26 }, { name: "Bob", age: 30 }];
 ```
 
 ## API
 
-### sort.numberSmallToLarge(get?)
+### numberSmallToLarge(get?)
 
 Ascending sort comparator for numbers.
 
-### sort.numberLargeToSmall(get?)
+### numberLargeToSmall(get?)
 
 Descending sort comparator for numbers.
 
-### sort.dateOldToNew(get?)
+### dateOldToNew(get?)
 
 Ascending sort comparator for Dates.
 
-### sort.dateNewToOld(get?)
+### dateNewToOld(get?)
 
 Descending sort comparator for Dates.
 
-### sort.stringAToZ(get?)
+### stringAToZ(get?)
 
 Ascending sort comparator for strings.
 
-### sort.stringZToA(get?)
+### stringZToA(get?)
 
 Descending sort comparator for strings.
 
-### sort.stringAToZInsensitive(get?)
+### stringAToZInsensitive(get?)
 
 Case-insensitive ascending sort comparator for strings.
 
 > Note: In case of equality, a case-sensitive comparison is the tie-breaker.
 
-### sort.stringZToAInsensitive(get?)
+### stringZToAInsensitive(get?)
 
 Case-insensitive descending sort comparator for strings.
 
