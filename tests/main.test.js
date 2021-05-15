@@ -11,8 +11,20 @@ test("main", (t) => {
 	t.truthy(stringZToA());
 	t.truthy(stringAToZInsensitive());
 	t.truthy(stringZToAInsensitive());
-	t.deepEqual([12, -42, Number.NEGATIVE_INFINITY, 123, Number.NaN].sort(numberSmallToLarge()), [Number.NaN, Number.NEGATIVE_INFINITY, -42, 12, 123]);
-	t.deepEqual([12, -42, Number.NEGATIVE_INFINITY, 123, Number.NaN].sort(numberLargeToSmall()), [123, 12, -42, Number.NEGATIVE_INFINITY, Number.NaN]);
+	t.deepEqual([
+		12,
+		-42,
+		Number.NEGATIVE_INFINITY,
+		123,
+		Number.NaN,
+	].sort(numberSmallToLarge()), [Number.NaN, Number.NEGATIVE_INFINITY, -42, 12, 123]);
+	t.deepEqual([
+		12,
+		-42,
+		Number.NEGATIVE_INFINITY,
+		123,
+		Number.NaN,
+	].sort(numberLargeToSmall()), [123, 12, -42, Number.NEGATIVE_INFINITY, Number.NaN]);
 	t.deepEqual([
 		new Date("2019-06-28"),
 		new Date("2019-06-10"),
