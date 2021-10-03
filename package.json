@@ -1,6 +1,6 @@
 {
 	"name": "@iamnapo/sort",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Sorting comparators so you don't have to remember what to substract from what",
 	"keywords": [
 		"comparator",
