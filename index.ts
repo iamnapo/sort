@@ -1,4 +1,4 @@
-const assertGet = (get: unknown) => {
+const assertGet = (get: Get<unknown>) => {
 	if (typeof get !== "function") {
 		throw new TypeError("Expected a function");
 	}
