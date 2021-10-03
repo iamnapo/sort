@@ -43,5 +43,5 @@ test("main", (t) => {
 		{ name: "Alice", age: 20 },
 		{ name: "Bob", age: 30 },
 		{ name: "Napoleon", age: 26 },
-	].sort(numberSmallToLarge((p) => p.age)), [{ name: "Alice", age: 20 }, { name: "Napoleon", age: 26 }, { name: "Bob", age: 30 }]);
+	].sort(numberSmallToLarge((p) => (p as { age: number }).age)), [{ name: "Alice", age: 20 }, { name: "Napoleon", age: 26 }, { name: "Bob", age: 30 }]);
 });
