@@ -2,12 +2,12 @@
 
 > Sorting comparators so you don't have to remember what to substract from what
 
-[![build](https://img.shields.io/github/workflow/status/iamnapo/sort/ci?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/sort/actions) [![npm](https://img.shields.io/npm/v/@iamnapo/sort.svg?style=for-the-badge&logo=npm&label=)](https://www.npmjs.com/package/@iamnapo/sort)
+[![build](https://badges.iamnapo.me/ci/iamnapo/sort)](https://github.com/iamnapo/sort/actions) [![npm](https://badges.iamnapo.me/npm/@iamnapo/sort)](https://www.npmjs.com/package/@iamnapo/sort)
 
 ## Install
 
 ```sh
-$ npm i @iamnapo/sort
+npm i @iamnapo/sort
 ```
 
 ## Usage
